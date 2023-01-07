@@ -1,22 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>BYPACITY</title>
+    <title>BYPACITY (copy)</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Do your schoolwork, free!" />
-    <meta property="og:site_name" content="BYPACITY" />
-    <meta property="og:title" content="BYPACITY" />
+    <meta property="og:site_name" content="BYPACITY (copy)" />
+    <meta property="og:title" content="BYPACITY (copy)" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Do your schoolwork, free!" />
-    <meta property="og:image" content="https://bpcty.carrd.co/assets/images/card.jpg?v=e4b5d7db" />
+    <meta property="og:image" content="https://nbosr.carrd.co/assets/images/card.jpg?v=7c0036bb" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
-    <meta property="og:url" content="https://bpcty.carrd.co" />
+    <meta property="og:url" content="https://nbosr.carrd.co" />
     <meta property="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://bpcty.carrd.co" />
-    <link href="https://fonts.googleapis.com/css?display=swap&family=Anonymous+Pro:400,400italic" rel="stylesheet" type="text/css" />
+    <link rel="canonical" href="https://nbosr.carrd.co" />
+    <link href="https://fonts.googleapis.com/css?display=swap&family=Anonymous+Pro:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
     <style>
       html,
       body,
@@ -216,7 +216,7 @@
       }
 
       html {
-        font-size: 19pt;
+        font-size: 17pt;
       }
 
       u {
@@ -298,14 +298,14 @@
         position: relative;
         text-align: var(--alignment);
         z-index: 1;
-        transition: opacity 1.375s ease 2.5s, filter 1.375s ease 2.5s;
+        transition: opacity 1.75s ease 0.625s, filter 1.75s ease 0.625s;
       }
 
       #main>.inner {
         --padding-horizontal: 3rem;
         --padding-vertical: 3rem;
         --spacing: 0.75rem;
-        --width: 40rem;
+        --width: 80rem;
         border-radius: var(--border-radius-tl) var(--border-radius-tr) var(--border-radius-br) var(--border-radius-bl);
         max-width: 100%;
         position: relative;
@@ -314,17 +314,24 @@
         padding: var(--padding-vertical) var(--padding-horizontal);
       }
 
-      #main>.inner>* {
-        margin-top: var(--spacing);
+      #main>.inner>header {
         margin-bottom: var(--spacing);
-        transition: opacity 1s ease-in-out 0s;
       }
 
-      #main>.inner> :first-child {
+      #main>.inner>footer {
+        margin-top: var(--spacing);
+      }
+
+      #main>.inner>*>* {
+        margin-top: var(--spacing);
+        margin-bottom: var(--spacing);
+      }
+
+      #main>.inner>*> :first-child {
         margin-top: 0 !important;
       }
 
-      #main>.inner> :last-child {
+      #main>.inner>*> :last-child {
         margin-bottom: 0 !important;
       }
 
@@ -356,29 +363,102 @@
         right: auto;
       }
 
+      #main>.inner>*>.full {
+        margin-left: calc(-3rem);
+        max-width: calc(100% + 6rem + 0.4725px);
+        width: calc(100% + 6rem + 0.4725px);
+      }
+
+      #main>.inner>*>.full.screen {
+        border-radius: 0 !important;
+        max-width: 100vw;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        right: auto;
+      }
+
+      #main>.inner>.active>.full:first-child {
+        margin-top: -3rem !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      #main>.inner>.active {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #main>.inner>.active>.full:last-child {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        margin-bottom: -3rem !important;
+      }
+
       body.is-loading #main {
         filter: blur(0.5rem);
         opacity: 0;
       }
 
-      body.is-loading #main>.inner>* {
+      #main>.inner>section>* {
+        transition: opacity 0s ease-in-out 0s;
+      }
+
+      body.is-loading #main>.inner>section>* {
         opacity: 0;
       }
 
-      #main>.inner> :nth-child(2) {
-        transition-delay: 1.75s;
+      #main>.inner>section> :nth-child(2) {
+        transition-delay: 0.5s;
       }
 
-      #main>.inner> :nth-child(3) {
+      #main>.inner>section> :nth-child(3) {
+        transition-delay: 1s;
+      }
+
+      #main>.inner>section> :nth-child(4) {
+        transition-delay: 1.5s;
+      }
+
+      #main>.inner>section> :nth-child(5) {
+        transition-delay: 2s;
+      }
+
+      #main>.inner>section> :nth-child(6) {
+        transition-delay: 2.5s;
+      }
+
+      #main>.inner>section> :nth-child(7) {
+        transition-delay: 3s;
+      }
+
+      #main>.inner>section> :nth-child(8) {
         transition-delay: 3.5s;
       }
 
-      #main>.inner> :nth-child(4) {
-        transition-delay: 5.25s;
+      #main>.inner>header,
+      #main>.inner>footer {
+        transition: opacity 0.25s ease-in-out 0.375s, visibility 0.25s linear 0.375s;
       }
 
-      #main>.inner> :nth-child(5) {
-        transition-delay: 7s;
+      #main>.inner>header.hidden,
+      #main>.inner>footer.hidden {
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out, visibility 0.25s;
+        visibility: hidden;
+      }
+
+      #main>.inner>section {
+        transition: opacity 0.5s ease-in-out 0.25s, transform 0.5s ease-in-out 0.25s, min-height 0.25s ease-in-out, max-height 0.25s ease-in-out;
+      }
+
+      #main>.inner>section.inactive {
+        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+        opacity: 0;
+        transform: scale(1.0475);
       }
 
       body.is-instant #main,
@@ -478,50 +558,12 @@
         -webkit-text-fill-color: currentcolor;
       }
 
-      #text02:not(:first-child) {
-        margin-top: 2.375rem !important;
-      }
-
-      #text02:not(:last-child) {
-        margin-bottom: 2.375rem !important;
-      }
-
-      #text02 {
-        color: #FFFFFF;
-        font-family: 'Anonymous Pro', monospace;
-        letter-spacing: -0.075rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.5;
-        font-weight: 400;
-      }
-
-      #text02 a {
-        text-decoration: underline;
-      }
-
-      #text02 a:hover {
-        text-decoration: none;
-      }
-
-      #text02 span.p:nth-child(n + 2) {
-        margin-top: 1rem;
-      }
-
-      #text01:not(:first-child) {
-        margin-top: 6rem !important;
-      }
-
-      #text01:not(:last-child) {
-        margin-bottom: 6rem !important;
-      }
-
       #text01 {
         color: #FFFFFF;
         font-family: 'Anonymous Pro', monospace;
         text-indent: 0.75rem;
-        font-size: 1em;
-        line-height: 1;
+        font-size: 0.875em;
+        line-height: 0.875;
         font-weight: 400;
       }
 
@@ -566,101 +608,302 @@
         margin-top: 1rem;
       }
 
-      .icc-credits {
-        display: block;
-        opacity: 1 !important;
-        position: relative;
-        transition-delay: 0s !important;
+      #text04:not(:first-child) {
+        margin-top: 6rem !important;
       }
 
-      .icc-credits span {
-        border-radius: 24px;
-        cursor: pointer;
-        display: inline-block;
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        letter-spacing: 0;
+      #text04:not(:last-child) {
+        margin-bottom: 6rem !important;
+      }
+
+      #text04 {
+        color: #FFFFFF;
+        font-family: 'Anonymous Pro', monospace;
+        text-indent: 0.75rem;
+        font-size: 1.625em;
         line-height: 1;
-        position: relative;
+        font-weight: 400;
+      }
+
+      #text04 a {
+        text-decoration: underline;
+      }
+
+      #text04 a:hover {
         text-decoration: none;
-        width: auto;
       }
 
-      .icc-credits span a {
-        display: inline-block;
-        padding: 0.5em 0.375em;
-        position: relative;
+      #text04 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+
+      #text02:not(:first-child) {
+        margin-top: 6rem !important;
+      }
+
+      #text02:not(:last-child) {
+        margin-bottom: 6rem !important;
+      }
+
+      #text02 {
+        color: #FFFFFF;
+        font-family: 'Anonymous Pro', monospace;
+        text-indent: 0.75rem;
+        font-size: 1.25em;
+        line-height: 1;
+        font-weight: 400;
+      }
+
+      #text02 a {
+        text-decoration: underline;
+      }
+
+      #text02 a:hover {
         text-decoration: none;
-        transition: color 0.25s ease, transform 0.25s ease;
-        z-index: 1;
       }
 
-      .icc-credits span a:before {
-        content: '( ';
-        opacity: 1;
-        transition: opacity 0.25s ease;
+      #text02 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
       }
 
-      .icc-credits span a:after {
-        content: ' )';
-        opacity: 1;
-        transition: opacity 0.25s ease;
+      .container {
+        position: relative;
       }
 
-      .icc-credits span::after {
-        background-image: linear-gradient(30deg, #A464A1 15%, #3B5DAD 85%);
+      .container>.wrapper {
+        vertical-align: top;
+        position: relative;
+        max-width: 100%;
         border-radius: inherit;
-        box-shadow: 0 0.25em 1.25em 0 rgba(0, 0, 0, 0.25);
-        content: '';
-        display: block;
-        height: calc(100% + 2px);
-        left: -1px;
-        opacity: 0;
-        pointer-events: none;
+      }
+
+      .container>.wrapper>.inner {
+        vertical-align: top;
+        position: relative;
+        max-width: 100%;
+        border-radius: inherit;
+        text-align: var(--alignment);
+      }
+
+      #main .container.full:first-child>.wrapper {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      #main .container.full:last-child>.wrapper {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #main .container.full:first-child>.wrapper>.inner {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      #main .container.full:last-child>.wrapper>.inner {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #container01:not(:first-child) {
+        margin-top: 2.125rem !important;
+      }
+
+      #container01>.wrapper {
+        display: inline-block;
+        width: 75rem;
+        background-color: transparent;
+      }
+
+      #container01>.wrapper>.inner {
+        --gutters: 2rem;
+        --padding-horizontal: 2.5rem;
+        --padding-vertical: 2rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+
+      #container01.default>.wrapper>.inner>* {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+
+      #container01.default>.wrapper>.inner>*:first-child {
+        margin-top: 0 !important;
+      }
+
+      #container01.default>.wrapper>.inner>*:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      #container01.columns>.wrapper>.inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #container01.columns>.wrapper>.inner>* {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+
+      #container01.columns>.wrapper>.inner>*>* {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+
+      #container01.columns>.wrapper>.inner>*>*:first-child {
+        margin-top: 0 !important;
+      }
+
+      #container01.columns>.wrapper>.inner>*>*:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      #container01.columns>.wrapper>.inner>*:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+
+      #container01.default>.wrapper>.inner>.full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+
+      #container01.default>.wrapper>.inner>.full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      #container01.default>.wrapper>.inner>.full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #container01.columns>.wrapper>.inner>div>.full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+
+      #container01.columns>.wrapper>.inner>div:first-child>.full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+      }
+
+      #container01.columns>.wrapper>.inner>div:last-child>.full {
+        width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+      }
+
+      #container01.columns>.wrapper>.inner>div>.full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+
+      #container01.columns>.wrapper>.inner>div>.full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+
+      #container01.columns>.wrapper>.inner>div:first-child,
+      #container01.columns>.wrapper>.inner>div:first-child>.full:first-child {
+        border-top-left-radius: inherit;
+      }
+
+      #container01.columns>.wrapper>.inner>div:last-child,
+      #container01.columns>.wrapper>.inner>div:last-child>.full:first-child {
+        border-top-right-radius: inherit;
+      }
+
+      #container01.columns>.wrapper>.inner>.full {
+        align-self: stretch;
+      }
+
+      #container01.columns>.wrapper>.inner>.full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+
+      #container01.columns>.wrapper>.inner>.full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+        border-radius: inherit;
+        height: 100%;
         position: absolute;
-        top: -1px;
-        transition: opacity 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-        width: calc(100% + 2px);
+        width: 100%;
       }
 
-      .icc-credits span:hover {
-        text-transform: none !important;
+      .buttons {
+        cursor: default;
+        display: flex;
+        justify-content: var(--flex-alignment);
+        letter-spacing: 0;
+        padding: 0;
       }
 
-      .icc-credits span:hover a {
-        color: #ffffff !important;
-        transform: scale(1.1) translateY(-0.05rem);
+      .buttons li {
+        max-width: 100%;
       }
 
-      .icc-credits span:hover a:before {
-        opacity: 0;
+      .buttons li a {
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        white-space: nowrap;
       }
 
-      .icc-credits span:hover a:after {
-        opacity: 0;
+      #buttons01 {
+        gap: 0.75rem;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
 
-      .icc-credits span:hover::after {
-        opacity: 1;
-        transform: scale(1.1) translateY(-0.05rem);
+      #buttons01 li a {
+        display: inline-block;
+        width: auto;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: 0 1.25rem;
+        vertical-align: middle;
+        font-family: 'Anonymous Pro', monospace;
+        font-size: 1em;
+        font-weight: 400;
+        border-radius: 0rem;
+        direction: var(--site-language-direction);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
       }
 
-      #credits span {
-        color: rgba(255, 255, 255, 0.498);
-        margin-top: 0.75rem !important;
+      #buttons01 .button {
+        background-color: #000000;
+        color: #FFFFFF;
       }
 
       @media (max-width: 1920px) {}
 
       @media (max-width: 1680px) {
         html {
-          font-size: 14pt;
+          font-size: 12pt;
         }
       }
 
       @media (max-width: 1280px) {
         html {
-          font-size: 14pt;
+          font-size: 12pt;
         }
       }
 
@@ -668,13 +911,13 @@
 
       @media (max-width: 980px) {
         html {
-          font-size: 12pt;
+          font-size: 11pt;
         }
       }
 
       @media (max-width: 736px) {
         html {
-          font-size: 11pt;
+          font-size: 10pt;
         }
 
         #main>.inner {
@@ -683,39 +926,34 @@
           --spacing: 0.75rem;
         }
 
+        #main>.inner>*>.full {
+          margin-left: calc(-2rem);
+          max-width: calc(100% + 4rem + 0.4725px);
+          width: calc(100% + 4rem + 0.4725px);
+        }
+
+        #main>.inner>*>.full.screen {
+          margin-left: -50vw;
+        }
+
+        #main>.inner>.active>.full:first-child {
+          margin-top: -3rem !important;
+        }
+
+        #main>.inner>.active>.full:last-child {
+          margin-bottom: -3rem !important;
+        }
+
         #image01 .frame {
           width: 16.875rem;
-        }
-
-        #text02:not(:first-child) {
-          margin-top: 1.78125rem !important;
-        }
-
-        #text02:not(:last-child) {
-          margin-bottom: 1.78125rem !important;
-        }
-
-        #text02 {
-          letter-spacing: -0.065625rem;
-          width: 100%;
-          font-size: 1em;
-          line-height: 1.5;
-        }
-
-        #text01:not(:first-child) {
-          margin-top: 2.625rem !important;
-        }
-
-        #text01:not(:last-child) {
-          margin-bottom: 2.625rem !important;
         }
 
         #text01 {
           text-indent: 0.5625rem;
           letter-spacing: 0rem;
           width: 100%;
-          font-size: 1em;
-          line-height: 1;
+          font-size: 0.875em;
+          line-height: 0.875;
         }
 
         #text03:not(:first-child) {
@@ -733,11 +971,160 @@
           font-size: 1em;
           line-height: 1;
         }
+
+        #text04:not(:first-child) {
+          margin-top: 2.625rem !important;
+        }
+
+        #text04:not(:last-child) {
+          margin-bottom: 2.625rem !important;
+        }
+
+        #text04 {
+          text-indent: 0.5625rem;
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 1.625em;
+          line-height: 1;
+        }
+
+        #text02:not(:first-child) {
+          margin-top: 2.625rem !important;
+        }
+
+        #text02:not(:last-child) {
+          margin-bottom: 2.625rem !important;
+        }
+
+        #text02 {
+          text-indent: 0.5625rem;
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 1.25em;
+          line-height: 1;
+        }
+
+        #container01:not(:first-child) {
+          margin-top: 1.59375rem !important;
+        }
+
+        #container01>.wrapper>.inner {
+          --gutters: 2rem;
+          --padding-horizontal: 2rem;
+          --padding-vertical: 2rem;
+        }
+
+        #container01.columns>.wrapper>.inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+
+        #container01.columns>.wrapper>.inner>span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+
+        #container01.columns>.wrapper>.inner>*:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>* {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>*:last-child {
+          padding-bottom: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-of-type>.full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-of-type>.full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div>.full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-of-type,
+        #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-of-type,
+        #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+
+        #container01.columns>.wrapper>.inner>div:first-of-type,
+        #container01.columns>.wrapper>.inner>div:first-of-type>.full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>div:last-of-type,
+        #container01.columns>.wrapper>.inner>div:last-of-type>.full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+
+        #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+          height: auto;
+        }
+
+        #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+
+        #buttons01 {
+          gap: 0.75rem;
+        }
+
+        #buttons01 li a {
+          letter-spacing: 0rem;
+          font-size: 1em;
+        }
       }
 
       @media (max-width: 480px) {
         #main>.inner {
           --spacing: 0.65625rem;
+        }
+
+        #buttons01 {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+
+        #buttons01 li a {
+          max-width: 32rem;
+          width: 100%;
         }
       }
 
@@ -748,16 +1135,48 @@
           --spacing: 0.5625rem;
         }
 
-        #text02 {
-          font-size: 1em;
+        #main>.inner>*>.full {
+          margin-left: calc(-1.5rem);
+          max-width: calc(100% + 3rem + 0.4725px);
+          width: calc(100% + 3rem + 0.4725px);
+        }
+
+        #main>.inner>*>.full.screen {
+          margin-left: -50vw;
+        }
+
+        #main>.inner>.active>.full:first-child {
+          margin-top: -2.25rem !important;
+        }
+
+        #main>.inner>.active>.full:last-child {
+          margin-bottom: -2.25rem !important;
         }
 
         #text01 {
-          font-size: 1em;
+          font-size: 0.875em;
         }
 
         #text03 {
           font-size: 1em;
+        }
+
+        #text04 {
+          font-size: 1.5em;
+        }
+
+        #text02 {
+          font-size: 1.25em;
+        }
+
+        #container01>.wrapper>.inner {
+          --gutters: 1.5rem;
+          --padding-horizontal: 1.5rem;
+          --padding-vertical: 1.5rem;
+        }
+
+        #buttons01 {
+          gap: 0.5625rem;
         }
       }
     </style>
@@ -781,7 +1200,7 @@
           filter: none !important;
         }
 
-        #main>.inner>* {
+        #main>.inner>section>* {
           opacity: 1.0 !important;
           transform: none !important;
           transition: none !important;
@@ -794,14 +1213,46 @@
     <div id="wrapper">
       <div id="main">
         <div class="inner">
-          <div id="image01" class="image">
-            <span class="frame">
-              <img src="https://files.catbox.moe/l9v2gw.png?v=e4b5d7db" alt="" />
-            </span>
-          </div>
-          <p id="text02">We&#039;re working to get things working again! Check back soon!</p>
-          <p id="text01">Join our <a href="https://discord.gg/">discord server</a> for updates. </p>
-          <p id="text03">©2021-2023 Bypacity Team</p>
+          <section id="home-section">
+            <div id="image01" class="image">
+              <span class="frame">
+                <img src="https://nbosr.carrd.co/assets/images/image01.png?v=7c0036bb" alt="" />
+              </span>
+            </div>
+            <p id="text01">Latest Patch: Lightspeed Bypass <strong>FIX</strong>
+            </p>
+            <div id="container01" class="container default">
+              <div class="wrapper">
+                <div class="inner">
+                  <ul id="buttons01" class="buttons">
+                    <li>
+                      <a href="https://domain.ext/path" class="button n01">Sign In</a>
+                    </li>
+                    <li>
+                      <a href="https://tsubiko.gumroad.com/l/bypacity" class="button n02">Buy Key</a>
+                    </li>
+                    <li>
+                      <a href="https://domain.ext/path" class="button n03">Submit Key</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p id="text03">©2021-2023 Bypacity Team <a href="https://nbosr.carrd.co/#terms">Terms</a>
+            </p>
+          </section>
+          <section id="terms-section">
+            <h1 id="text04">TERMS AND CONDITIONS</h1>
+            <h2 id="text02">
+              <span class="p">Thank you for choosing Bypacity! <br /> Let&#039;s run down a few things before you get started. </span>
+              <span class="p">By ordering our product you assume that you read and agree to this Terms and Conditions document.</span>
+              <span class="p">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: &quot;Client&quot;, &quot;You&quot; and &quot;Your&quot; refers to you, the person log on this website and compliant to the Company’s terms and conditions. &quot;The Company&quot;, &quot;Ourselves&quot;, &quot;We&quot;, &quot;Our&quot; and &quot;Us&quot;, refers to our Company. &quot;Party&quot;, &quot;Parties&quot;, or &quot;Us&quot;, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</span>
+              <span class="p">License <br /> Unless otherwise stated, Bypacity Systems Inc and/or its licensors own the intellectual property rights for all material on Bypacity. All intellectual property rights are reserved. You may access this from Bypacity for your own personal use subjected to restrictions set in these terms and conditions. <br /> You must not: <br /> Republish material from Bypacity <br /> Sell, rent or sub-license material from Bypacity <br /> Reproduce, duplicate or copy material from Bypacity <br /> Redistribute content from Bypacity. <br /> This includes sharing of login details. <br /> If caught, your account will be disabled, and the devices you access Bypacity from will be logged. </span>
+              <span class="p">Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Bypacity Systems Inc does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Bypacity Systems Inc,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Bypacity Systems Inc shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website. <br /> Bypacity Systems Inc reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions. <br /> You warrant and represent that: <br /> You are entitled to post the Comments on our website and have all necessary licenses and consents to do so; <br /> The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party; <br /> The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy <br /> The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity. <br /> You hereby grant Bypacity Systems Inc a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media. </span>
+              <span class="p">Disclaimer</span>
+              <span class="p">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will: <br /> limit or exclude our or your liability for death or personal injury; <br /> limit or exclude our or your liability for fraud or fraudulent misrepresentation; <br /> limit any of our or your liabilities in any way that is not permitted under applicable law; or <br /> exclude any of our or your liabilities that may not be excluded under applicable law. <br /> The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty. <br /> As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature. </span>
+            </h2>
+          </section>
         </div>
       </div>
     </div>
@@ -1039,10 +1490,273 @@
             $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
             setTimeout(function() {
               $body.className = $body.className.replace(/\bis-playing\b/, 'is-ready');
-            }, 8000);
+            }, 3500);
           }, 100);
         });
-        loadElements(document.body);
+        (function() {
+          var initialSection, initialScrollPoint, initialId, header, footer, name, hideHeader, hideFooter, disableAutoScroll, h, e, ee, k, locked = false,
+            scrollPointParent = function(target) {
+              var target;
+              target = event.target;
+              while (target) {
+                if (target.parentElement && target.parentElement.tagName == 'SECTION') break;
+                target = target.parentElement;
+              }
+              return target;
+            },
+            doNextScrollPoint = function(event) {
+              var e, target, id;
+              event.preventDefault();
+              event.stopPropagation();
+              e = scrollPointParent(event.target);
+              if (!e) return;
+              while (e && e.nextElementSibling) {
+                e = e.nextElementSibling;
+                if (e.dataset.scrollId) {
+                  target = e;
+                  id = e.dataset.scrollId;
+                  break;
+                }
+              }
+              if (!target || !id) return;
+              if (target.dataset.scrollInvisible == '1') scrollToElement(target);
+              else location.href = '#' + id;
+            },
+            doPreviousScrollPoint = function(e) {
+              var e, target, id;
+              event.preventDefault();
+              event.stopPropagation();
+              e = scrollPointParent(event.target);
+              if (!e) return;
+              while (e && e.previousElementSibling) {
+                e = e.previousElementSibling;
+                if (e.dataset.scrollId) {
+                  target = e;
+                  id = e.dataset.scrollId;
+                  break;
+                }
+              }
+              if (!target || !id) return;
+              if (target.dataset.scrollInvisible == '1') scrollToElement(target);
+              else location.href = '#' + id;
+            },
+            doFirstScrollPoint = function(e) {
+              var e, target, id;
+              event.preventDefault();
+              event.stopPropagation();
+              e = scrollPointParent(event.target);
+              if (!e) return;
+              while (e && e.previousElementSibling) {
+                e = e.previousElementSibling;
+                if (e.dataset.scrollId) {
+                  target = e;
+                  id = e.dataset.scrollId;
+                }
+              }
+              if (!target || !id) return;
+              if (target.dataset.scrollInvisible == '1') scrollToElement(target);
+              else location.href = '#' + id;
+            },
+            doLastScrollPoint = function(e) {
+              var e, target, id;
+              event.preventDefault();
+              event.stopPropagation();
+              e = scrollPointParent(event.target);
+              if (!e) return;
+              while (e && e.nextElementSibling) {
+                e = e.nextElementSibling;
+                if (e.dataset.scrollId) {
+                  target = e;
+                  id = e.dataset.scrollId;
+                }
+              }
+              if (!target || !id) return;
+              if (target.dataset.scrollInvisible == '1') scrollToElement(target);
+              else location.href = '#' + id;
+            },
+            doNextSection = function() {
+              var section;
+              section = $('#main > .inner > section.active').nextElementSibling;
+              if (!section || section.tagName != 'SECTION') return;
+              location.href = '#' + section.id.replace(/-section$/, '');
+            },
+            doPreviousSection = function() {
+              var section;
+              section = $('#main > .inner > section.active').previousElementSibling;
+              if (!section || section.tagName != 'SECTION') return;
+              location.href = '#' + (section.matches(':first-child') ? '' : section.id.replace(/-section$/, ''));
+            },
+            doFirstSection = function() {
+              var section;
+              section = $('#main > .inner > section:first-of-type');
+              if (!section || section.tagName != 'SECTION') return;
+              location.href = '#' + section.id.replace(/-section$/, '');
+            },
+            doLastSection = function() {
+              var section;
+              section = $('#main > .inner > section:last-of-type');
+              if (!section || section.tagName != 'SECTION') return;
+              location.href = '#' + section.id.replace(/-section$/, '');
+            },
+            sections = {
+              'terms': {
+                hideHeader: true,
+                hideFooter: true,
+              },
+            };
+          window._nextScrollPoint = doNextScrollPoint;
+          window._previousScrollPoint = doPreviousScrollPoint;
+          window._firstScrollPoint = doFirstScrollPoint;
+          window._lastScrollPoint = doLastScrollPoint;
+          window._nextSection = doNextSection;
+          window._previousSection = doPreviousSection;
+          window._firstSection = doFirstSection;
+          window._lastSection = doLastSection;
+          window._scrollToTop = function() {
+            var section, id;
+            scrollToElement(null);
+            if (!!(section = $('section.active'))) {
+              id = section.id.replace(/-section$/, '');
+              if (id == 'home') id = '';
+              history.pushState(null, null, '#' + id);
+            }
+          };
+          if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+          header = $('#header');
+          footer = $('#footer');
+          h = thisHash();
+          if (h && !h.match(/^[a-zA-Z0-9\-]+$/)) h = null;
+          if (e = $('[data-scroll-id="' + h + '"]')) {
+            initialScrollPoint = e;
+            initialSection = initialScrollPoint.parentElement;
+            initialId = initialSection.id;
+          } else if (e = $('#' + (h ? h : 'home') + '-section')) {
+            initialScrollPoint = null;
+            initialSection = e;
+            initialId = initialSection.id;
+          }
+          if (!initialSection) {
+            initialScrollPoint = null;
+            initialSection = $('#' + 'home' + '-section');
+            initialId = initialSection.id;
+            history.replaceState(undefined, undefined, '#');
+          }
+          name = (h ? h : 'home');
+          hideHeader = name ? ((name in sections) && ('hideHeader' in sections[name]) && sections[name].hideHeader) : false;
+          hideFooter = name ? ((name in sections) && ('hideFooter' in sections[name]) && sections[name].hideFooter) : false;
+          disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+          if (header && hideHeader) {
+            header.classList.add('hidden');
+            header.style.display = 'none';
+          }
+          if (footer && hideFooter) {
+            footer.classList.add('hidden');
+            footer.style.display = 'none';
+          }
+          ee = $$('#main > .inner > section:not([id="' + initialId + '"])');
+          for (k = 0; k < ee.length; k++) {
+            ee[k].className = 'inactive';
+            ee[k].style.display = 'none';
+          }
+          initialSection.classList.add('active');
+          loadElements(initialSection);
+          if (header) loadElements(header);
+          if (footer) loadElements(footer);
+          if (!disableAutoScroll) scrollToElement(null, 'instant');
+          on('load', function() {
+            if (initialScrollPoint) scrollToElement(initialScrollPoint, 'instant');
+          });
+          on('hashchange', function(event) {
+            var section, scrollPoint, id, sectionHeight, currentSection, currentSectionHeight, name, hideHeader, hideFooter, disableAutoScroll, h, e, ee, k;
+            if (locked) return false;
+            h = thisHash();
+            if (h && !h.match(/^[a-zA-Z0-9\-]+$/)) return false;
+            if (e = $('[data-scroll-id="' + h + '"]')) {
+              scrollPoint = e;
+              section = scrollPoint.parentElement;
+              id = section.id;
+            } else if (e = $('#' + (h ? h : 'home') + '-section')) {
+              scrollPoint = null;
+              section = e;
+              id = section.id;
+            } else {
+              scrollPoint = null;
+              section = $('#' + 'home' + '-section');
+              id = section.id;
+              history.replaceState(undefined, undefined, '#');
+            }
+            if (!section) return false;
+            if (!section.classList.contains('inactive')) {
+              name = (section ? section.id.replace(/-section$/, '') : null);
+              disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+              if (scrollPoint) scrollToElement(scrollPoint);
+              else if (!disableAutoScroll) scrollToElement(null);
+              return false;
+            } else {
+              locked = true;
+              if (location.hash == '#home') history.replaceState(null, null, '#');
+              name = (section ? section.id.replace(/-section$/, '') : null);
+              disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
+              currentSection = $('section:not(.inactive)');
+              if (currentSection) {
+                currentSection.classList.add('inactive');
+                unloadElements(currentSection);
+                setTimeout(function() {
+                  currentSection.style.display = 'none';
+                  currentSection.classList.remove('active');
+                }, 250);
+              }
+              setTimeout(function() {
+                section.style.display = '';
+                trigger('resize');
+                if (!disableAutoScroll) scrollToElement(null, 'instant');
+                setTimeout(function() {
+                  section.classList.remove('inactive');
+                  section.classList.add('active');
+                  setTimeout(function() {
+                    loadElements(section);
+                    if (scrollPoint) scrollToElement(scrollPoint, 'instant');
+                    locked = false;
+                  }, 500);
+                }, 75);
+              }, 250);
+            }
+            return false;
+          });
+          on('click', function(event) {
+            var t = event.target,
+              tagName = t.tagName.toUpperCase(),
+              scrollPoint;
+            switch (tagName) {
+              case 'IMG':
+              case 'SVG':
+              case 'USE':
+              case 'U':
+              case 'STRONG':
+              case 'EM':
+              case 'CODE':
+              case 'S':
+              case 'MARK':
+              case 'SPAN':
+                while (!!(t = t.parentElement))
+                  if (t.tagName == 'A') break;
+                if (!t) return;
+                break;
+              default:
+                break;
+            }
+            if (t.tagName == 'A' && t.getAttribute('href').substr(0, 1) == '#') {
+              if (!!(scrollPoint = $('[data-scroll-id="' + t.hash.substr(1) + '"][data-scroll-invisible="1"]'))) {
+                event.preventDefault();
+                scrollToElement(scrollPoint);
+              } else if (t.hash == window.location.hash) {
+                event.preventDefault();
+                history.replaceState(undefined, undefined, '#');
+                location.replace(t.hash);
+              }
+            }
+          });
+        })();
         var style, sheet, rule;
         style = document.createElement('style');
         style.appendChild(document.createTextNode(''));
