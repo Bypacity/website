@@ -1,17 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@font-face {
+  font-family: ginto;
+  src: url(https://files.catbox.moe/kt9rxc.ttf);
+}
+
 #bg {
-  background-image: url('https://files.catbox.moe/49vxgm.jpg');
+  background-image: url('https://files.catbox.moe/17tff6.jpg');
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'ginto';
   color: #4A4A4A;
   display: flex;
   justify-content: center;
@@ -62,7 +66,7 @@ form .form-field {
   position: relative;
 }
 form input {
-  font-family: inherit;
+  font-family: ginto;
   width: 100%;
   outline: none;
   background-color: #fff;
